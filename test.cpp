@@ -48,7 +48,7 @@ int main() {
 	std::cout << "Test 5: Cursor positioning" << std::endl;
 	rlutil::locate(16,6); std::cout << "(16,6)";
 	rlutil::locate(4,3); std::cout << "(4,3)";
-	rlutil::locate(8,8); std::cout << "(8,8)";
+	rlutil::writestr(8,8,"(8,8)");
 	std::cout << std::endl << "You should see three coordinates in their specified locations." << std::endl;
 	waitkey;
 
@@ -60,7 +60,7 @@ int main() {
 			std::cout << "You should be able to move the '@' character with WASD keys." << std::endl;
 			std::cout << "Hit Space to continue to the next test." << std::endl;
 			std::cout << "Turn count: " << cnt << std::endl;
-			rlutil::locate(x,y); std::cout << "@"; // Output player
+			rlutil::writechar(x,y,'@'); // Output player
 			char k = getch(); // Get character
 			if (k == 'a') --x;
 			else if (k == 'd') ++x;
@@ -90,7 +90,7 @@ int main() {
 				else if (k == 'w') --y;
 				else if (k == 's') ++y;
 				else if (k == ' ') break;
-				rlutil::write(x,y,'@'); // Output player using the write method
+				rlutil::writechar(x,y,'@'); // Output player using the write method
 			}
 			cnt++;
 			fflush(stdout);

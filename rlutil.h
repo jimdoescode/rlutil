@@ -438,13 +438,19 @@ void locate(int x, int y) {
 #endif // WIN32 || USE_ANSI
 }
 
-/// Function: write
-/// Writes a single character at the specified location
-void writechar(int x, int y, char c)
-{
+/// Function: writechar
+/// Writes a character at the specified location
+void writechar(int x, int y, char c) {
 	locate(x, y);
-	std::cout << c;
-}	
+	RLUTIL_PRINT(&c);
+}
+	
+/// Function: writestr
+/// Writes a string at the specified location
+void writestr(int x, int y, char *str) {
+	locate(x, y);
+	RLUTIL_PRINT(str);
+}
 	
 /// Function: hidecursor
 /// Hides the cursor.
