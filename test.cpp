@@ -90,7 +90,7 @@ int main() {
 				else if (k == 'w') --y;
 				else if (k == 's') ++y;
 				else if (k == ' ') break;
-				rlutil::locate(x,y); std::cout << "@"; // Output player
+				rlutil::write(x,y,'@'); // Output player using the write method
 			}
 			cnt++;
 			fflush(stdout);

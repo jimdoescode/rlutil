@@ -438,6 +438,14 @@ void locate(int x, int y) {
 #endif // WIN32 || USE_ANSI
 }
 
+/// Function: write
+/// Writes a single character at the specified location
+void writechar(int x, int y, char c)
+{
+	locate(x, y);
+	std::cout << c;
+}	
+	
 /// Function: hidecursor
 /// Hides the cursor.
 void inline hidecursor() {
