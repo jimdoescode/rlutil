@@ -447,7 +447,7 @@ void writechar(int x, int y, char c) {
 	
 /// Function: writestr
 /// Writes a string at the specified location
-void writestr(int x, int y, char *str) {
+void writestr(int x, int y, const char *str) {
 	locate(x, y);
 	RLUTIL_PRINT(str);
 }
